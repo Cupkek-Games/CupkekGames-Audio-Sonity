@@ -1,0 +1,20 @@
+{
+    "name": "CupkekGames.Audio.Sonity",
+    "rootNamespace": "",
+    "references": [
+        "GUID:627a6a50a96ba294eb51be4e4019a893",
+        "GUID:4c33768f512cd6845b7f12462e3175df",
+        "GUID:7587e79dba767974180aaa071919b937",
+        "GUID:eddc24eca6301ba4193fbddf2fc974a5",
+        "GUID:b2b3c76a1f4ed6f4c92f38ce2073937e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
