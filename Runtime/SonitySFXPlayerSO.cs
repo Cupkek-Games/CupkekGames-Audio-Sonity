@@ -6,17 +6,17 @@ using CupkekGames.Audio;
 namespace CupkekGames.Audio.Sonity
 {
     [CreateAssetMenu(fileName = "SonitySFXPlayer", menuName = "CupkekGames/Integration/Sonity/SFX Player")]
-    public class SonitySFXPlayerSO : ScriptableObject, ISFXPlayer
+    public class SonitySFXPlayerSO : SFXPlayerSO
     {
         [SerializeField] private SoundEvent _soundEvent;
 
-        public void Play(Transform transform)
+        public override void Play(Transform transform)
         {
             if (_soundEvent != null)
                 _soundEvent.Play(transform);
         }
 
-        public void RegisterTimeScale(TimeBundle timeBundle, Transform owner)
+        public override void RegisterTimeScale(TimeBundle timeBundle, Transform owner)
         {
             if (_soundEvent == null || timeBundle == null) return;
 
