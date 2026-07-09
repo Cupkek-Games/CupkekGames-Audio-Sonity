@@ -18,6 +18,6 @@
   ],
   "dependencies": {
     "com.cupkekgames.audio": "0.2.0",
-    "com.cupkekgames.timesystem": "0.1.0"
+    "com.cupkekgames.timesystem": "0.2.3"
   }
 }
