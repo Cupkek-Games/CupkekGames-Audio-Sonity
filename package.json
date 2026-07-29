@@ -1,7 +1,7 @@
 {
   "name": "com.cupkekgames.audio.sonity",
   "displayName": "CupkekGames Audio — Sonity Bridge",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "CupkekGames",
     "url": "https://www.docs.cupkek.games"
@@ -18,6 +18,6 @@
   ],
   "dependencies": {
     "com.cupkekgames.audio": "0.2.0",
-    "com.cupkekgames.timesystem": "0.2.3"
+    "com.cupkekgames.timesystem": "0.2.5"
   }
 }
