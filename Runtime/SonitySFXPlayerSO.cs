@@ -5,7 +5,7 @@ using CupkekGames.Audio;
 
 namespace CupkekGames.Audio.Sonity
 {
-    [CreateAssetMenu(fileName = "SonitySFXPlayer", menuName = "CupkekGames/Integration/Sonity/SFX Player")]
+    [CreateAssetMenu(fileName = "SonitySFXPlayer", menuName = "CupkekGames/Audio/Sonity/SFX Player")]
     public class SonitySFXPlayerSO : SFXPlayerSO
     {
         [SerializeField] private SoundEvent _soundEvent;
