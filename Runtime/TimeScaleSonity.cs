@@ -18,9 +18,8 @@ namespace CupkekGames.Audio.Sonity
 
         public TimeScaleSonity(TimeContext context)
         {
-            Context = context ?? TimeManager.Instance?.Global;
-            if (Context != null)
-                Context.OnTimeScaleChanged += OnTimeScaleChanged;
+            Context = context ?? throw new System.ArgumentNullException(nameof(context));
+            Context.OnTimeScaleChanged += OnTimeScaleChanged;
         }
 
         public void Add(SoundEvent soundEvent, Transform owner, SoundParameterPitchRatio soundParameterPitchRatio)
@@ -159,8 +158,7 @@ namespace CupkekGames.Audio.Sonity
 
         public void Dispose()
         {
-            if (Context != null)
-                Context.OnTimeScaleChanged -= OnTimeScaleChanged;
+            Context.OnTimeScaleChanged -= OnTimeScaleChanged;
             Clear();
         }
     }
