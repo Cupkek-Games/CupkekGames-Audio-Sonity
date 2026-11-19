@@ -34,11 +34,13 @@ namespace CupkekGames.Audio.Sonity
                     break;
                 }
                 case AudioChannels.SFX when ctx?.Source != null:
-                    soundEvent.Play(ctx.Source);
+                    if (Mathf.Approximately(ctx.PitchSemitones, 0f)) soundEvent.Play(ctx.Source);
+                    else _soundManager.Play(soundEvent, ctx.Source, new SoundParameterPitchSemitone(ctx.PitchSemitones));
                     break;
                 // Ambient / UI / SFX2D / unknown 2D channels — non-positional via Sonity's UI route.
                 default:
-                    _soundManager.UIPlay(soundEvent);
+                    if (ctx == null || Mathf.Approximately(ctx.PitchSemitones, 0f)) _soundManager.UIPlay(soundEvent);
+                    else _soundManager.UIPlay(soundEvent, new SoundParameterPitchSemitone(ctx.PitchSemitones));
                     break;
             }
         }
